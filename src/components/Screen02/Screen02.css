@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 42px auto;
+}
+
+.header img {
+  width: 52px;
+  margin-right: 20px;
+}
+
+.header p {
+  font-family: Righteous;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44.7px;
+  color: #ffffff;
+  height: 59px;
+  width: 44px;
+}

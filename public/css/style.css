@@ -1,0 +1,10 @@
+body {
+  font-family: "Recursive", sans-serif;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  background-color: #fb6b6b;
+}
+
+.root {
+  max-width: 614px;
+}

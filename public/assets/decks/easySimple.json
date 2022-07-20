@@ -1,0 +1,62 @@
+[
+  {
+    "question": "say",
+    "answer": "said"
+  },
+  {
+    "question": "make",
+    "answer": "made"
+  },
+  {
+    "question": "go",
+    "answer": "went"
+  },
+  {
+    "question": "take",
+    "answer": "took"
+  },
+  {
+    "question": "come",
+    "answer": "came"
+  },
+  {
+    "question": "see",
+    "answer": "saw"
+  },
+  {
+    "question": "know",
+    "answer": "knew"
+  },
+  {
+    "question": "get",
+    "answer": "got"
+  },
+  {
+    "question": "give",
+    "answer": "gave"
+  },
+  {
+    "question": "find",
+    "answer": "found"
+  },
+  {
+    "question": "think",
+    "answer": "thought"
+  },
+  {
+    "question": "tell",
+    "answer": "told"
+  },
+  {
+    "question": "become",
+    "answer": "became"
+  },
+  {
+    "question": "show",
+    "answer": "showed"
+  },
+  {
+    "question": "leave",
+    "answer": "left"
+  }
+]
