@@ -1,0 +1,27 @@
+.box-answer div {
+  color: #ffffff;
+  width: 85.17px;
+  height: 37.17px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.box-answer div > p {
+  width: 80%;
+}
+
+.red {
+  background-color: #ff3030;
+}
+
+.yellow {
+  background-color: #ff922e;
+}
+
+.green {
+  background-color: #2fbe34;
+}

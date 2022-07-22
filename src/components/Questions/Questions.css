@@ -1,0 +1,54 @@
+.closed_question {
+  width: 450px;
+  margin: 0 auto;
+  height: 65px;
+  margin-bottom: 25px;
+  padding: 0 10px 0 15px;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closed_question ion-icon {
+  font-size: 30px;
+}
+
+.opened_question {
+  width: 450px;
+  height: 131px;
+  margin-bottom: 25px;
+  padding: 15px 15px 6px 15px;
+
+  background-color: #ffffd4;
+  color: #333333;
+
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opened_question img {
+  width: 30px;
+  height: 20px;
+  align-self: flex-end;
+}
+
+.box-answer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
