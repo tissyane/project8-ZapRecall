@@ -14,6 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .closed_question ion-icon {
@@ -45,10 +46,57 @@
   width: 30px;
   height: 20px;
   align-self: flex-end;
+  cursor: pointer;
 }
 
-.box-answer {
+.answer_box {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.answer_box div {
+  color: #ffffff;
+  width: 125px;
+  height: 37.17px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.answer_box div > p {
+  width: 80%;
+}
+
+.forgot {
+  background-color: #ff3030;
+  color: #ff3030;
+}
+
+.almost {
+  background-color: #ff922e;
+}
+
+.zap {
+  background-color: #2fbe34;
+}
+
+.answered {
+  text-decoration: line-through;
+  cursor: inherit;
+}
+
+.red {
+  color: #ff3030;
+}
+
+.orange {
+  color: #ff922e;
+}
+
+.green {
+  color: #2fbe34;
 }

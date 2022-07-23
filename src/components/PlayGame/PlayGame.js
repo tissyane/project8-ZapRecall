@@ -36,7 +36,7 @@ export default function PlayGame() {
     },
   ];
 
-  const sortdeck = deck.sort(() => Math.random() - 0.5);
+  deck.sort(() => Math.random() - 0.5);
 
   return (
     <>
@@ -44,7 +44,7 @@ export default function PlayGame() {
         <Logo />
       </div>
       <section>
-        {sortdeck.map((data, index) => (
+        {deck.map((data, index) => (
           <Questions
             key={index}
             question={data.question}

@@ -1,3 +1,14 @@
+body {
+  font-family: "Recursive", sans-serif;
+}
+
+.root {
+  max-width: 614px;
+  height: 100vh;
+  background-color: #fb6b6b;
+  overflow-y: scroll;
+}
+
 .home {
   width: 100%;
   display: flex;
