@@ -1,11 +1,12 @@
 import Footer from "../Footer/Footer";
 import Logo from "../Logo/Logo";
-import Questions from "../Questions/Questions";
+
 import "./PlayGame.css";
 import React from "react";
+import Questions from "../Questions/Questions";
 
 export default function PlayGame() {
-  const [answersCount, setAnswersCount] = React.useState(0);
+  const [answersIcons, setAnswersIcons] = React.useState([]);
 
   const deck = [
     {
@@ -58,12 +59,13 @@ export default function PlayGame() {
             question={data.question}
             id={index + 1}
             answer={data.answer}
-            setAnswersCount={setAnswersCount}
+            setAnswersIcons={setAnswersIcons}
+            answersIcons={answersIcons}
           />
         ))}
       </section>
       <div>
-        <Footer size={deck.length} answers={answersCount} />
+        <Footer size={deck.length} answers={answersIcons} />
       </div>
     </>
   );
