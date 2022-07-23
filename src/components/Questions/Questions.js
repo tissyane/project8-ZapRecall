@@ -2,15 +2,12 @@ import React from "react";
 import arrow from "../images/arrow.png";
 import "./Questions.css";
 
-export default function Questions({ id, question, answer }) {
-  const [questionState, setQuestionState] = React.useState(<Closed />);
+export default function Questions({ id, question, answer, setAnswersCount }) {
+  const [state, setState] = React.useState(<Closed />);
 
   function Closed() {
     return (
-      <div
-        className="closed_question"
-        onClick={() => setQuestionState(<Opened />)}
-      >
+      <div className="closed_question" onClick={() => setState(<Opened />)}>
         <div>{"Pergunta " + id}</div>
         <div>
           <ion-icon name="play-outline"></ion-icon>
@@ -26,7 +23,7 @@ export default function Questions({ id, question, answer }) {
           <p>{question}</p>
         </div>
         <img
-          onClick={() => setQuestionState(<ShowAnswer />)}
+          onClick={() => setState(<Recall />)}
           src={arrow}
           alt="Setinha"
         ></img>
@@ -34,68 +31,79 @@ export default function Questions({ id, question, answer }) {
     );
   }
 
-  function ShowAnswer() {
+  function Recall() {
     return (
       <div className="opened_question">
         <div>{answer}</div>
         <div className="answer_box">
           <div
             className="forgot"
-            onClick={() => setQuestionState(<Recall color="forgot" />)}
+            onClick={() => {
+              setAnswersCount((answersCount) => {
+                return answersCount + 1;
+              });
+              setState(<CheckAnswer boxAnswer="forgot" />);
+            }}
           >
-            Forgot
+            Não lembrei
           </div>
           <div
             className="almost"
-            onClick={() => setQuestionState(<Recall color="almost" />)}
+            onClick={() => {
+              setAnswersCount((answersCount) => {
+                return answersCount + 1;
+              });
+              setState(<CheckAnswer boxAnswer="almost" />);
+            }}
           >
-            Almost
+            Quase não lembrei
           </div>
           <div
             className="zap"
-            onClick={() => setQuestionState(<Recall color="zap" />)}
+            onClick={() => {
+              setAnswersCount((answersCount) => {
+                return answersCount + 1;
+              });
+              setState(<CheckAnswer boxAnswer="zap" />);
+            }}
           >
-            Zap
+            Zap!
           </div>
         </div>
       </div>
     );
   }
 
-  function Recall({ color }) {
-    switch (color) {
-      case "forgot":
-        return (
-          <div className="closed_question answered red">
-            <div>{"Pergunta " + id}</div>
-            <div>
-              <ion-icon name="close-circle"></ion-icon>
-            </div>
+  function CheckAnswer({ boxAnswer }) {
+    if (boxAnswer === "forgot")
+      return (
+        <div className="closed_question answered red">
+          <div>{"Pergunta " + id}</div>
+          <div>
+            <ion-icon name="close-circle"></ion-icon>
           </div>
-        );
+        </div>
+      );
 
-      case "almost":
-        return (
-          <div className="closed_question answered orange">
-            <div>{"Pergunta " + id}</div>
-            <div>
-              <ion-icon name="help-circle"></ion-icon>
-            </div>
+    if (boxAnswer === "almost")
+      return (
+        <div className="closed_question answered orange">
+          <div>{"Pergunta " + id}</div>
+          <div>
+            <ion-icon name="help-circle"></ion-icon>
           </div>
-        );
-      case "zap":
-        return (
-          <div className="closed_question answered green">
-            <div>{"Pergunta " + id}</div>
-            <div>
-              <ion-icon name="checkmark-circle"></ion-icon>
-            </div>
+        </div>
+      );
+    if (boxAnswer === "zap")
+      return (
+        <div className="closed_question answered green">
+          <div>{"Pergunta " + id}</div>
+          <div>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
-        );
-      default:
-        return <></>;
-    }
+        </div>
+      );
   }
 
-  return <>{questionState}</>;
+  return <>{state}</>;
 }

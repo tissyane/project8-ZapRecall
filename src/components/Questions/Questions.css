@@ -65,6 +65,7 @@
   text-align: center;
   align-items: center;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .answer_box div > p {

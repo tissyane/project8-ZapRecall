@@ -1,9 +1,11 @@
 import "./Footer.css";
 
-export default function Footer() {
+export default function Footer({ answers, size }) {
   return (
     <footer>
-      <p>0/4 Concluídos</p>
+      <p>
+        {answers}/{size} Concluídos
+      </p>
     </footer>
   );
 }

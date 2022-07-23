@@ -2,8 +2,11 @@ import Footer from "../Footer/Footer";
 import Logo from "../Logo/Logo";
 import Questions from "../Questions/Questions";
 import "./PlayGame.css";
+import React from "react";
 
 export default function PlayGame() {
+  const [answersCount, setAnswersCount] = React.useState(0);
+
   const deck = [
     {
       question: "Como iniciar um repositório git?",
@@ -16,7 +19,7 @@ export default function PlayGame() {
     },
     {
       question: "Quais os passos para adicionar mudanças ao repo no GitHub?",
-      answer: "git add <filename>\ngit commit -m 'mensagem'\ngit push",
+      answer: "git add <filename> \n git commit -m 'mensagem'\ngit push",
     },
     {
       question: "Qual o comando para adicionar um arquivo a área de staging?",
@@ -34,6 +37,11 @@ export default function PlayGame() {
       question: "Como ver a área de staging?",
       answer: "git status",
     },
+    {
+      question:
+        "Como fazer download da última versão de um projeto de um reposítorio remoto para sua máquina?",
+      answer: "git clone <url>",
+    },
   ];
 
   deck.sort(() => Math.random() - 0.5);
@@ -50,11 +58,12 @@ export default function PlayGame() {
             question={data.question}
             id={index + 1}
             answer={data.answer}
+            setAnswersCount={setAnswersCount}
           />
         ))}
       </section>
       <div>
-        <Footer />
+        <Footer size={deck.length} answers={answersCount} />
       </div>
     </>
   );
