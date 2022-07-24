@@ -1,9 +1,11 @@
 body {
   font-family: "Recursive", sans-serif;
+  background-color: black;
 }
 
 .root {
   max-width: 614px;
+  margin: 0 auto;
   height: 100vh;
   background-color: #fb6b6b;
   overflow-y: scroll;

@@ -4,7 +4,14 @@ import "./Questions.css";
 
 function Closed({ id, setState, icon }) {
   return (
-    <div className={"closed_question " + icon} onClick={() => setState(1)}>
+    <div
+      className={"closed_question " + icon}
+      onClick={() => {
+        if (icon === "play-outline") {
+          setState(1);
+        }
+      }}
+    >
       <div>{"Pergunta " + id}</div>
       <div>
         <ion-icon name={icon}></ion-icon>
@@ -82,13 +89,15 @@ export default function Questions({
   if (state === 1) {
     return <Opened question={question} setState={setState} />;
   }
-  return (
-    <Recall
-      answer={answer}
-      answersIcons={answersIcons}
-      setAnswersIcons={setAnswersIcons}
-      setState={setState}
-      setIcon={setIcon}
-    />
-  );
+  if (state === 2) {
+    return (
+      <Recall
+        answer={answer}
+        answersIcons={answersIcons}
+        setAnswersIcons={setAnswersIcons}
+        setState={setState}
+        setIcon={setIcon}
+      />
+    );
+  }
 }

@@ -4,7 +4,7 @@ export default function Results({ answers, size, index }) {
   return (
     <footer>
       <p>
-        {answers.length}/{size} Concluídos
+        {answers.length}/{size} CONCLUÍDOS
       </p>
       <div>
         {answers.map((answer) => (

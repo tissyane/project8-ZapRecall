@@ -13,7 +13,10 @@ export default function Message({ answers }) {
           <p>Putz...</p>
         </div>
         <div className="message_body">
-          <p> Ainda faltam alguns... Mas não desanime!</p>
+          <p>
+            Ainda faltam alguns... <br />
+            Mas não desanime!
+          </p>
         </div>
       </>
     );
@@ -26,7 +29,9 @@ export default function Message({ answers }) {
         <p>Parabéns!</p>
       </div>
       <div className="message_body">
-        <p>Você não esqueceu de nenhum flashcard!</p>
+        <p>
+          Você não esqueceu de <br /> nenhum flashcard!
+        </p>
       </div>
     </>
   );

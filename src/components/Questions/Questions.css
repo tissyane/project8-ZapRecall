@@ -1,5 +1,6 @@
 .closed_question {
-  width: 450px;
+  width: 80vw;
+  max-width: 450px;
   margin: 0 auto;
   height: 65px;
   margin-bottom: 25px;
@@ -22,7 +23,8 @@ ion-icon {
 }
 
 .opened_question {
-  width: 450px;
+  width: 80vw;
+  max-width: 450px;
   height: 131px;
   margin-bottom: 25px;
   padding: 15px 15px 6px 15px;

@@ -3,10 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: Recursive;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
+  margin-top: 16px;
 }
 
 .message_title img {
@@ -15,4 +17,5 @@
 
 .message_body {
   margin-bottom: 30px;
+  text-align: center;
 }
