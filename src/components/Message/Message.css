@@ -1,0 +1,18 @@
+.message_title {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Recursive;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+.message_title img {
+  margin-right: 10px;
+}
+
+.message_body {
+  margin-bottom: 30px;
+}

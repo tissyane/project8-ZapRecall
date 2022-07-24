@@ -1,16 +1,21 @@
+import Message from "../Message/Message";
+import Results from "../Results/Results";
 import "./Footer.css";
 
-export default function Footer({ answers, size }) {
+export default function Footer({ answers, size, index }) {
+  if (answers.length === size) {
+    return (
+      <footer className="final_result">
+        <div>
+          <Message answers={answers} key={index} />
+        </div>
+        <Results answers={answers} size={size} key={index} />
+      </footer>
+    );
+  }
   return (
     <footer>
-      <p>
-        {answers.length}/{size} Concluídos
-      </p>
-      <div>
-        {answers.map((answer) => (
-          <ion-icon name={answer}></ion-icon>
-        ))}
-      </div>
+      <Results answers={answers} size={size} key={index} />
     </footer>
   );
 }

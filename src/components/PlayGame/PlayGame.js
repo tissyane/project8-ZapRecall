@@ -5,7 +5,7 @@ import "./PlayGame.css";
 import React from "react";
 import Questions from "../Questions/Questions";
 
-export default function PlayGame() {
+export default function PlayGame(index) {
   const [answersIcons, setAnswersIcons] = React.useState([]);
 
   const deck = [
@@ -50,7 +50,7 @@ export default function PlayGame() {
   return (
     <>
       <div className="header">
-        <Logo />
+        <Logo key={index} />
       </div>
       <section>
         {deck.map((data, index) => (
@@ -65,7 +65,7 @@ export default function PlayGame() {
         ))}
       </section>
       <div>
-        <Footer size={deck.length} answers={answersIcons} />
+        <Footer size={deck.length} answers={answersIcons} key={index} />
       </div>
     </>
   );

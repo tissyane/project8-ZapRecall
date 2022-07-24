@@ -1,8 +1,6 @@
 import React from "react";
-
 import Logo from "../Logo/Logo";
 import PlayGame from "../PlayGame/PlayGame";
-
 import "./App.css";
 
 export default function App() {
