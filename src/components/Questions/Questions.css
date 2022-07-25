@@ -1,6 +1,6 @@
 .closed_question,
 .opened_question {
-  width: 80vw;
+  width: 90vw;
   max-width: 450px;
   margin: 0 auto;
   margin-bottom: 25px;
@@ -52,7 +52,7 @@ ion-icon {
 
 .answer_box div {
   color: #ffffff;
-  width: 120px;
+  width: 100px;
   height: 37.17px;
   border-radius: 5px;
   display: flex;
@@ -61,6 +61,9 @@ ion-icon {
   align-items: center;
   font-size: 12px;
   cursor: pointer;
+  gap: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .answer_box div > p {
