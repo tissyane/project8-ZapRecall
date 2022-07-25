@@ -31,7 +31,7 @@ body {
 }
 
 .home .logo p {
-  font-family: Righteous;
+  font-family: "Righteous", cursive;
 
   font-size: 36px;
   line-height: 44.7px;
@@ -47,7 +47,7 @@ button {
   background-color: #ffffff;
   color: #d70900;
 
-  font-family: Recursive;
+  font-family: "Recursive", sans-serif;
 
   font-size: 18px;
   line-height: 21.6px;
