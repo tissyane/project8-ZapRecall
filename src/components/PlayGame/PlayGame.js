@@ -1,9 +1,10 @@
-import Footer from "../Footer/Footer";
-import Logo from "../Logo/Logo";
+import React from "react";
 
 import "./PlayGame.css";
-import React from "react";
+
+import Logo from "../Logo/Logo";
 import Questions from "../Questions/Questions";
+import Footer from "../Footer/Footer";
 
 export default function PlayGame(index) {
   const [answersIcons, setAnswersIcons] = React.useState([]);

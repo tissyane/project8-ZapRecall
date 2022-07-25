@@ -1,19 +1,23 @@
-.closed_question {
+.closed_question,
+.opened_question {
   width: 80vw;
   max-width: 450px;
   margin: 0 auto;
-  height: 65px;
   margin-bottom: 25px;
-  padding: 0 10px 0 15px;
-  background-color: #ffffff;
-  color: #333333;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.closed_question {
+  height: 65px;
+  padding: 0 10px 0 15px;
+  background-color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: 19.2px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
@@ -23,25 +27,14 @@ ion-icon {
 }
 
 .opened_question {
-  width: 80vw;
-  max-width: 450px;
   height: 131px;
-  margin-bottom: 25px;
   padding: 15px 15px 6px 15px;
-
   background-color: #ffffd4;
-  color: #333333;
-
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  cursor: default;
 }
 
 .opened_question img {
@@ -86,31 +79,24 @@ ion-icon {
   background-color: #2fbe34;
 }
 
-.close-circle {
-  color: #ff3030;
-  text-decoration: line-through;
-  cursor: inherit;
-}
-
-.help-circle {
-  color: #ff922e;
-  text-decoration: line-through;
-  cursor: inherit;
-}
-
-.checkmark-circle {
-  color: #2fbe34;
-  text-decoration: line-through;
-  cursor: inherit;
-}
-
+.close-circle,
 ion-icon[name="close-circle"] {
   color: #ff3030;
 }
 
+.help-circle,
 ion-icon[name="help-circle"] {
   color: #ff922e;
 }
+
+.checkmark-circle,
 ion-icon[name="checkmark-circle"] {
   color: #2fbe34;
+}
+
+.close-circle,
+.help-circle,
+.checkmark-circle {
+  text-decoration: line-through;
+  cursor: default;
 }

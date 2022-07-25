@@ -1,6 +1,7 @@
 import React from "react";
-import arrow from "../images/arrow.png";
+
 import "./Questions.css";
+import arrow from "../images/arrow.svg";
 
 function Closed({ id, setState, icon }) {
   return (

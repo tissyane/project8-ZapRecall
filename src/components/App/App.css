@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Recursive", sans-serif;
   background-color: black;
@@ -16,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: default;
+  font-weight: 400;
 }
 
 .home .logo img {
@@ -26,7 +32,7 @@ body {
 
 .home .logo p {
   font-family: Righteous;
-  font-weight: 400;
+
   font-size: 36px;
   line-height: 44.7px;
   color: #ffffff;
@@ -42,7 +48,7 @@ button {
   color: #d70900;
 
   font-family: Recursive;
-  font-weight: 400;
+
   font-size: 18px;
   line-height: 21.6px;
 
