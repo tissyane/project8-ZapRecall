@@ -5,17 +5,18 @@ import "./Footer.css";
 export default function Footer({ answers, size, index }) {
   if (answers.length === size) {
     return (
-      <footer className="final_result">
-        <div>
+      <footer>
+        <div className="final_result">
           <Message answers={answers} key={index} />
+          <Results answers={answers} size={size} key={index} />
         </div>
+      </footer>
+    );
+  } else {
+    return (
+      <footer>
         <Results answers={answers} size={size} key={index} />
       </footer>
     );
   }
-  return (
-    <footer>
-      <Results answers={answers} size={size} key={index} />
-    </footer>
-  );
 }

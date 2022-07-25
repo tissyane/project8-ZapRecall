@@ -2,7 +2,7 @@ import "./Results.css";
 
 export default function Results({ answers, size, index }) {
   return (
-    <footer>
+    <div className="results">
       <p>
         {answers.length}/{size} CONCLUÍDOS
       </p>
@@ -11,6 +11,6 @@ export default function Results({ answers, size, index }) {
           <ion-icon name={answer} key={index}></ion-icon>
         ))}
       </div>
-    </footer>
+    </div>
   );
 }

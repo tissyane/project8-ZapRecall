@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 footer {
   background-color: #ffffff;
   color: #333333;
-
+  width: 100%;
   max-width: 614px;
   height: 70px;
-
   margin: 0 auto;
   font-family: Recursive;
   font-weight: 400;
@@ -17,10 +20,25 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .final_result {
+  width: 100%;
+  max-width: 614px;
   height: 171px;
+  position: fixed;
+  bottom: 0;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
+  padding-bottom: 25px;
+}
+
+button {
+  background-color: red;
+  height: 24px;
 }
